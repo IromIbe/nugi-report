@@ -1,0 +1,43 @@
+const size = {
+  xsmall: "280px",
+  small: "325px",
+  s8Plus: "360px",
+  medium: "375px",
+  pro: "390px",
+  pixel: "393px",
+  s20Ultra: "412px",
+  xr: "414px",
+  mobile: "500px",
+  surfaceDuo: "540px",
+  res: "600px",
+  tabpro: "716px",
+  miniTab: "768px",
+  ipadAir: "820px",
+  tablet: "900px",
+  surfacePro: "912px",
+  large: "1120px",
+  galaxyTab: "712px",
+};
+
+const devices = {
+  xsmall: `(max-width: ${size.xsmall})`,
+  small: `(max-width: ${size.small})`,
+  s8Plus: `(max-width: ${size.s8Plus})`,
+  medium: `(max-width: ${size.medium})`,
+  pro: `(max-width: ${size.pro})`,
+  pixel: `(max-width: ${size.pixel})`,
+  s20Ultra: `(max-width: ${size.s20Ultra})`,
+  xr: `(max-width: ${size.xr})`,
+  mobile: `(max-width: ${size.mobile})`,
+  surfaceDuo: `(max-width: ${size.surfaceDuo})`,
+  res: `(max-width: ${size.res})`,
+  tabpro: `(max-width: ${size.tabpro})`,
+  miniTab: `(max-width: ${size.miniTab})`,
+  ipadAir: `(max-width: ${size.ipadAir})`,
+  tablet: `(max-width: ${size.tablet})`,
+  surfacePro: `(max-width: ${size.surfacePro})`,
+  large: `(max-width: ${size.large})`,
+  galaxyTab: `(max-width: ${size.galaxyTab})`,
+};
+
+export default devices;
