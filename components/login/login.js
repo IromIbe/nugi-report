@@ -1,30 +1,31 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import { LoginContainer, SideImg, LoginBody } from "./login.style";
+import { LoginContainer, LoginBody } from "./login.style";
+import SideImg from "../sharedComp/sideImg/sideImg";
+import Image from "next/image";
 
 function Login() {
   const [loginDetails, setLoginDetails] = useState({
     username: "",
     password: "",
   });
+  // const [disable, setDisable] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setLoginDetails({ ...loginDetails, [name]: value });
   };
   return (
     <LoginContainer>
-      <SideImg>
-        <img src='/assets/logo.svg' className='logo' alt='' />
-
-        <h1>
-          REPORT <br />
-          MANAGEMENT <br />
-          SYSTEM
-        </h1>
-      </SideImg>
+      <SideImg />
       <LoginBody>
         <div className='body-cont'>
           <div className='mobile-logo'>
-            <img src='/assets/logo.svg' className='logo' alt='' />
+            <Image
+              src='/assets/logo.svg'
+              layout='fill'
+              className='logo'
+              alt=''
+            />
           </div>
           <div className='title'>
             <h1>Login</h1>
@@ -52,7 +53,12 @@ function Login() {
               <p>
                 Forgot password? <span>Click here</span>
               </p>
-              <button>Login</button>
+              <button
+                type='submit'
+                disabled={!loginDetails.username || !loginDetails.password}
+              >
+                Login
+              </button>
             </form>
             <div className='login-alt'>
               <span>Or login with</span>

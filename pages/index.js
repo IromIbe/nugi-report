@@ -1,9 +1,9 @@
-import Login from "./components/login/login";
+import Login from "../components/login/login";
 import styled from "styled-components";
 
 const LoginCont = styled.div``;
 
-export default function Home() {
+export default function LoginScreen() {
   return (
     <LoginCont>
       <Login />

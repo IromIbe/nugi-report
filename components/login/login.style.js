@@ -1,59 +1,10 @@
 import styled from "styled-components";
-import devices from "../../../utils/mobile";
+import devices from "../../utils/mobile";
 
 export const LoginContainer = styled.div`
   display: flex;
   @media ${devices.mobile} {
     flex-direction: column;
-  }
-`;
-
-export const SideImg = styled.div`
-  background: url("/assets/side-pic.svg");
-  width: 40%;
-  ${"" /* height: 100vh; */}
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  ${"" /* overflow: hidden; */}
-  position: relative;
-  display: inline-block;
-
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-  }
-
-  h1 {
-    font-family: "Epilogue", sans-serif;
-    position: absolute;
-    z-index: 999;
-    margin: 0 auto;
-    left: 0;
-    right: 10px;
-    ont-style: normal;
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 58px;
-    text-align: right;
-    letter-spacing: 0.15em;
-    color: #ffffff;
-    top: 40%; /* Adjust this value to move the positioned div up and down */
-    text-align: right;
-    @media ${devices.surfacePro} {
-      font-size: 2.4rem;
-    }
-    @media ${devices.miniTab} {
-      font-size: 2rem;
-    }
-    @media ${devices.res} {
-      font-size: 1.6rem;
-    }
-  }
-  @media ${devices.mobile} {
-    display: none;
   }
 `;
 
@@ -97,7 +48,10 @@ export const LoginBody = styled.div`
       color: #0f017a;
 
       @media ${devices.mobile} {
-        padding: 100px 0 10px 0;
+        padding: 100px 0 60px 0;
+      }
+      @media ${devices.xsmall} {
+        padding: 100px 0 30px 0;
       }
     }
     .form {
@@ -159,6 +113,11 @@ export const LoginBody = styled.div`
           color: #e5e5e5;
           padding: 8px 13px;
           margin-top: 20px;
+
+          &:disabled {
+            background: #0f017a;
+            opacity: 0.8;
+          }
         }
         @media ${devices.mobile} {
           width: 90%;
