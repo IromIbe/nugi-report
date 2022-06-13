@@ -1,36 +1,47 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { overviewCont, FirstCont, SecondCont } from "./overview.style";
+import { OverviewCont, FirstCont, SecondCont } from "./overview.style";
 import ProgressCard from "./progressCard";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import ViewReports from "./viewReports";
+import ProjectCalendar from "./calender/calendar";
+import TodoList from "./todoList";
+import Link from "next/dist/client/link";
 function Overview() {
   const percentage = 95;
-  const numbered = 80;
+  const numbered = 60;
 
   return (
-    <overviewCont className='flex'>
+    <OverviewCont className='flex'>
       <FirstCont className=''>
         <div className='heading pb-10'>
           <h1 className='text-black font-bold text-3xl pb-2'>Hello, Rebecca</h1>
           <p className='text-base font-normal text-gray-500'>Welcome Back!</p>
         </div>
-        <div className='card flex justify-between'>
+        <div className='card flex justify-between mb-12'>
           <ProgressCard>
-            <div className='flex'>
-              <img src='/assets/thunder.svg' alt='' />
-              <div className='text pl-3'>
-                <p className='text-xl text-[#2196F3]'>16 days!!!</p>
+            <div className='flex-col flex md:flex-row justify-center items-center'>
+              <img src='/assets/thunder.svg' alt='' className='' />
+              <div className='text sm:pl-1 md:pl-2 lg:pl-5 pl-5'>
+                <p className='md:text-lg lg:text-xl text-[#2196F3]'>
+                  16 days!!!
+                </p>
                 <span className='text-sm text-[#A6D5FA]'>Let’s keep it up</span>
               </div>
             </div>
           </ProgressCard>
           <ProgressCard>
-            <div className='flex'>
+            <div className='flex-col flex  md:flex-row justify-center items-center'>
               <div className='text flex justify-center items-center'>
-                <p className='text-lg text-black pr-5 font-medium'>This week</p>
+                <p className='text-lg text-black sm:pr-1 md:pr-0 lg:pr-1 pr-3 font-medium'>
+                  This week
+                </p>
               </div>
-              <div style={{ width: "40%", fontWeight: 600 }}>
+              <div
+                style={{ width: "80px", fontWeight: 600 }}
+                className='md:pl-2'
+              >
                 <CircularProgressbar
                   value={numbered}
                   //   maxValue={1}
@@ -41,20 +52,22 @@ function Overview() {
                     pathTransitionDuration: 0.5,
                     pathColor: `#2196F3`,
                     textColor: "#000000",
-                    fontWeight: 800,
                   })}
                 />
               </div>
             </div>
           </ProgressCard>
           <ProgressCard>
-            <div className='flex'>
+            <div className='flex-col flex  md:flex-row justify-center items-center'>
               <div className='text flex justify-center items-center'>
-                <p className='text-lg text-black pr-5 font-medium'>
+                <p className='text-lg text-black sm:pr-2 md:pr-0 lg:pr-1 pr-5 font-medium'>
                   Total Reports
                 </p>
               </div>
-              <div style={{ width: "40%", fontWeight: 600 }}>
+              <div
+                style={{ width: "80px", fontWeight: 600 }}
+                className='md:pl-2'
+              >
                 <CircularProgressbar
                   value={percentage}
                   text={`${percentage}%`}
@@ -70,9 +83,31 @@ function Overview() {
             </div>
           </ProgressCard>
         </div>
+        <div className='view-reports'>
+          <ViewReports />
+          <span className='flex justify-end items-end pt-4 text-[#686B6F] text-base font-normal'>
+            View all
+          </span>
+        </div>
       </FirstCont>
-      <SecondCont className='w-30'></SecondCont>
-    </overviewCont>
+      <SecondCont className=' px-8'>
+        <div className='flex justify-start items-center  flex-col'>
+          <Link href='/dashboard/add_report'>
+            <button className='add border-solid border-2 border-white-600 text-white mt-12 mb-14 font-bold text-tiny flex justify-center items-center p-3'>
+              <span className='mr-2'>
+                <img src='/assets/addIcon.svg' alt='' />
+              </span>{" "}
+              Add Report
+            </button>
+          </Link>
+
+          <div className='calender w-full pt-4 px-5'>
+            <ProjectCalendar />
+          </div>
+          <TodoList />
+        </div>
+      </SecondCont>
+    </OverviewCont>
   );
 }
 

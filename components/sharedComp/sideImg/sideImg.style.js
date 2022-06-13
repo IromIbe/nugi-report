@@ -4,14 +4,14 @@ import devices from "../../../utils/mobile";
 export const SideImgCont = styled.div`
   background: url("/assets/side-pic.svg");
   width: 40%;
-  ${"" /* height: 100vh; */}
+  height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  ${"" /* left: 0; */}
+  bottom: 0;
   z-index: 1;
   ${"" /* overflow: hidden; */}
   position: relative;
-  display: inline-block;
 
   .logo {
     position: absolute;
@@ -44,6 +44,9 @@ export const SideImgCont = styled.div`
     @media ${devices.res} {
       font-size: 1.6rem;
     }
+  }
+  @media ${devices.mobile} {
+    display: none;
   }
   @media ${devices.mobile} {
     display: none;

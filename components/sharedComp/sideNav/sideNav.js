@@ -61,15 +61,17 @@ function SideNav() {
                 className='nav-link flex  items-center py-4 cursor-pointer'
                 onClick={() => handleClick(navLink.name)}
               >
-                {navLink.icon}
                 <Link href={navLink.link}>
-                  <Color
-                    className='sm:pl-1 md:pl-2 lg:pl-3  sm:text-xs md:text-sm lg:text-tiny text-xs'
-                    active={activePage === navLink.name}
-                  >
-                    {" "}
-                    {navLink.name}
-                  </Color>
+                  <div className=' icon flex justify-center items-center'>
+                    {navLink.icon}
+                    <Color
+                      className='sm:pl-1 md:pl-2 lg:pl-3  sm:text-xs md:text-sm lg:text-tiny text-xs'
+                      active={activePage === navLink.name}
+                    >
+                      {" "}
+                      {navLink.name}
+                    </Color>
+                  </div>
                 </Link>
               </div>
             </>
@@ -83,15 +85,19 @@ function SideNav() {
                 className='nav-link flex  items-center py-3 cursor-pointer'
                 onClick={() => handleClick(navLink.name)}
               >
-                {navLink.icon}
                 <Link href={navLink.link}>
-                  <Color
-                    className='sm:pl-1 md:pl-2 lg:pl-3 sm:text-xs md:text-sm text-xs'
-                    active={activePage === navLink.name}
-                  >
-                    {" "}
-                    {navLink.name}
-                  </Color>
+                  <div className='flex justify-center items-center'>
+                    <div className='flex justify-end items-end'>
+                      {navLink.icon}
+                    </div>
+                    <Color
+                      className='sm:pl-1 md:pl-2 lg:pl-3 sm:text-xs md:text-sm lg:text-tiny text-xs'
+                      active={activePage === navLink.name}
+                    >
+                      {" "}
+                      {navLink.name}
+                    </Color>
+                  </div>
                 </Link>
               </div>
             </>

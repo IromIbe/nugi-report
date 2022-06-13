@@ -15,7 +15,7 @@ export const Profile = ({ color }) => (
 
 export const Report = ({ color }) => (
   <svg
-    width='19'
+    width='22'
     height='22'
     viewBox='0 0 19 22'
     fill='none'
@@ -30,8 +30,8 @@ export const Report = ({ color }) => (
 
 export const Overview = ({ color }) => (
   <svg
-    width='23'
-    height='23'
+    width='22'
+    height='22'
     viewBox='0 0 23 23'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
@@ -48,8 +48,8 @@ export const Overview = ({ color }) => (
       maskUnits='userSpaceOnUse'
       x='1'
       y='1'
-      width='21'
-      height='21'
+      width='22'
+      height='22'
     >
       <path
         fillRule='evenodd'
@@ -81,8 +81,8 @@ export const Setting = ({ color }) => (
 
 export const Notification = ({ color }) => (
   <svg
-    width='20'
-    height='24'
+    width='22'
+    height='22'
     viewBox='0 0 20 24'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
@@ -97,7 +97,7 @@ export const Notification = ({ color }) => (
 export const Logout = ({ color }) => (
   <svg
     width='22'
-    height='23'
+    height='22'
     viewBox='0 0 22 23'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'

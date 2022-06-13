@@ -1,23 +1,22 @@
 import styled from "styled-components";
-import devices from "../../utils/mobile";
+import devices from "../../../utils/mobile";
 
-export const LoginContainer = styled.div``;
-
-export const LoginBody = styled.div`
+export const ChangePasswordCont = styled.div`
   background: url("/assets/login-bg.svg");
   width: 100%;
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+  height: 100vh;
   .body-cont {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
     min-height: 100vh;
-    padding: 0 auto;
+
     .mobile-logo {
       display: none;
       position: absolute;
@@ -29,32 +28,63 @@ export const LoginBody = styled.div`
       }
     }
     .title {
-      padding: 60px 0 100px 0;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      flex-direction: column;
+      padding: 0px 0 60px 0;
+      @media ${devices.mobile} {
+        padding: 100px 10px 60px 10px;
 
+        }
+      @media ${devices.xsmall} {
+        padding: 80px 10px 20px 10px;
+
+        }
+      }
       h1 {
         font-family: "Epilogue";
         font-style: normal;
         font-weight: 600;
         font-size: 45px;
-        line-height: 46px;
-        letter-spacing: 0.09em;
+        ${"" /* line-height: 46px; */}
+        letter-spacing: 0.015em;
         color: #0f017a;
-      }
-      @media ${devices.mobile} {
-        padding: 100px 0 60px 0;
-      }
-      @media ${devices.xsmall} {
-        padding: 100px 0 30px 0;
-      }
-    }
 
+        @media ${devices.tabpro} {
+          font-size: 35px;
+        }
+        @media ${devices.res} {
+          font-size: 27px;
+        }
+        @media ${devices.mobile} {
+          font-size: 35px;
+        }
+        @media ${devices.s20Ultra} {
+          font-size: 30px;
+        }
+        @media ${devices.s8Plus} {
+          font-size: 25px;
+        }
+        @media ${devices.xsmall} {
+          font-size: 20px;
+        }
+      }
+      p {
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.015em;
+      }
+
+    }
     .form {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       form {
-        width: 75%;
+        width: 60%;
         margin-bottom: 35px;
         label {
           margin-left: 20px;
@@ -66,8 +96,8 @@ export const LoginBody = styled.div`
 
           color: #4f4f4f;
           input {
-            margin-bottom: 30px;
-            padding: 15px 20px;
+            margin-bottom: 35px;
+            padding: 15px 23px;
             width: 100%;
             background: #ffffff;
             border: 1px solid #cacaca;
@@ -77,7 +107,6 @@ export const LoginBody = styled.div`
             background: transparent;
           }
         }
-
         button {
           text-align: center;
           width: 100%;
@@ -85,77 +114,31 @@ export const LoginBody = styled.div`
           border: none;
           background: #0f017a;
           border-radius: 25px;
-
           font-family: "Space Grotesk";
           font-style: normal;
           font-weight: 700;
-          font-size: 17px;
+          font-size: 15px;
           line-height: 19px;
           color: #e5e5e5;
           padding: 12px 13px;
           margin-top: 20px;
-
-          &:disabled {
-            background: #0f017a;
-            opacity: 0.8;
-          }
         }
-        @media ${devices.tabpro} {
-          width: 85%;
+        @media ${devices.large} {
+          width: 70%;
+        }
+        @media ${devices.surfacePro} {
+          width: 80%;
+        }
+        @media ${devices.galaxyTab} {
+          width: 87%;
+        }
+        @media ${devices.res} {
+          width: 95%;
         }
         @media ${devices.res} {
           width: 90%;
         }
-        @media ${devices.mobile} {
-          width: 90%;
-        }
-      }
-      .login-alt {
-        width: 65%;
-
-        span {
-          font-family: "Space Grotesk";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 12px;
-          line-height: 15px;
-
-          color: #757171;
-          display: flex;
-          flex-direction: row;
-        }
-        span:before,
-        span:after {
-          content: "";
-          flex: 1 1;
-          border-bottom: 1px solid;
-          margin: auto;
-        }
-        span:before {
-          margin-right: 10px;
-        }
-        span:after {
-          margin-left: 10px;
-        }
-
-        .alt {
-          padding: 15px 19px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          .alt-login {
-            background: #ffffff;
-            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
-            border-radius: 8px;
-            padding: 6px;
-          }
-        }
       }
     }
-  }
-
-  @media ${devices.mobile} {
-    width: 100%;
   }
 `;

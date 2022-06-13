@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { SideImgCont } from "./sideImg.style";
-function SideImg() {
+function SideImg({ width }) {
   return (
     <SideImgCont>
       <img src='/assets/logo.svg' className='logo' alt='' />
