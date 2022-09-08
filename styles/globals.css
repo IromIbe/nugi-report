@@ -34,7 +34,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 25px;
+  line-height: 22px;
 }
 .react-calendar__month-view__days__day--neighboringMonth {
   visibility: hidden;
@@ -122,3 +122,47 @@ body {
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #e6e6e6;
 }
+
+.image {
+  width: 40px;
+  height: 40px;
+  background: #f9f9f9;
+  border-radius: 50%;
+}
+.image .img {
+  display: none;
+}
+.ticked {
+  transition: background-color 0.5s;
+  background-color: #2196f3;
+  animation: colorChange 4s;
+  animation-iteration-count: 1;
+}
+.ticked .img {
+  transition: display 0.5s;
+  display: block;
+  animation: image 1s;
+  animation-iteration-count: 1;
+}
+
+/* .checkmark-svg {
+  stroke: white;
+}
+
+@keyframes colorChange {
+  from {
+    background-color: #f9f9f9;
+  }
+  to {
+    background-color: #2196f3;
+  }
+}
+
+@keyframes image {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+} */

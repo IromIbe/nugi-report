@@ -3,13 +3,15 @@ import devices from "../../utils/mobile";
 
 export const ReportCont = styled.div`
   font-family: "Montserrat", sans-serif;
-  width: 100%;
+  width: 100;
+
   .main {
     width: 72%;
     padding: 2.8rem 2.5rem;
-    border-right: 1px solid rgba(215, 223, 241, 0.45);
+
     border-radius: 6px;
     min-height: 100vh;
+    border-right: 1px solid rgba(215, 223, 241, 0.45);
 
     .dual-cont {
       width: 100%;
@@ -17,7 +19,6 @@ export const ReportCont = styled.div`
 
       .cont-one {
         width: 38%;
-        ${"" /* border: 1px solid red; */}
         .task-item {
           input {
             width: 100%;
@@ -26,12 +27,14 @@ export const ReportCont = styled.div`
             outline: none;
             border-radius: 10px;
             font-weight: 500;
-            font-size: 14px;
-            line-height: 15px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            color: #000000;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: #686b6f;
           }
         }
         .add {
@@ -41,6 +44,10 @@ export const ReportCont = styled.div`
           border-radius: 10px;
           font-style: normal;
           line-height: 15px;
+
+          &:hover {
+            background: #1c7dca;
+          }
         }
       }
       .cont-two {
@@ -54,11 +61,12 @@ export const ReportCont = styled.div`
               now-wrap: wrap;
               outline: none;
               border-radius: 10px;
-              font-weight: 500;
-              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
               line-height: 15px;
 
-              color: #000000;
+              color: #686b6f;
             }
           }
           .description {
@@ -67,6 +75,9 @@ export const ReportCont = styled.div`
             border-radius: 10px;
             padding: 3rem 1.8rem;
             textarea {
+              font-size: 13px;
+              line-height: 32px;
+              color: #686b6f;
               padding: 10px 0;
               border-top: 1px solid #e0e0e0;
               border-bottom: 1px solid #e0e0e0;
@@ -87,18 +98,24 @@ export const ReportCont = styled.div`
           }
         }
         .send {
-          height: 35px;
+          height: 32px;
+          ${"" /* border: 1px solid red; */}
           .save {
+            font-family: "Montserrat";
             font-style: normal;
-            font-weight: 600;
-            font-size: 15px;
-            ${"" /* line-height: 18px; */}
-            color: #545c6b;
-            padding: 2px 30px;
-            height: 100%;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
             background: #e5e5e5;
+            color: #545c6b;
+            padding: 2px 22px;
+            height: 100%;
             margin-right: 2.5px;
             border-radius: 10px 0px 0px 10px;
+
+            &:hover {
+              background: #d5d5d5;
+            }
           }
           .save-btn {
             height: 100%;
@@ -109,9 +126,5 @@ export const ReportCont = styled.div`
         }
       }
     }
-  }
-  .side-bar {
-    padding: 3.3rem 1rem;
-    width: 28%;
   }
 `;

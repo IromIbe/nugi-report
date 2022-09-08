@@ -7,15 +7,24 @@ const ViewReportsCont = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 35px;
 
-  .blue {
-    background: #8ec5f7;
-  }
-  .lighter {
-    background: #5276e1;
-  }
   .single {
+    background: url(/assets/light-bg.svg);
     border-radius: 25px;
     height: 165px;
+    width: 100%;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background: url(/assets/dark-bg.svg);
+      border-radius: 25px;
+      height: 165px;
+      width: 100%;
+      background-position: center;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
   }
   @media ${devices.res} {
     display: flex;
@@ -37,12 +46,7 @@ function ViewReports() {
   return (
     <ViewReportsCont>
       {displayFour.map((item, idx) => (
-        <div
-          className={`${
-            idx % 2 === 0 + 1 ? "blue" : "lighter"
-          } single flex justify-center items-center`}
-          key={idx}
-        >
+        <div className='single flex justify-center items-center' key={idx}>
           <h1 className='font-medium text-xl text-[#ffff]'>{item.title}</h1>
         </div>
       ))}

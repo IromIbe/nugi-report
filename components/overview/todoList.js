@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const TodoCont = styled.div`
   .todos {
@@ -18,14 +20,15 @@ const todo = [
 
 function TodoList() {
   return (
-    <TodoCont className='w-full pt-10 flex flex-col'>
+    <TodoCont className='w-full pt-12 flex flex-col'>
       <div className='title flex justify-between items-end pb-6'>
-        <h3 className='text-[#686B6F] text-base font-semibold leading-4'>
+        <h3 className='text-[#686B6F] text-tiny font-semibold leading-5'>
           To-Do List
         </h3>
-        <span className='text-[#2196F3] font-semibold text-tiny leading-3'>
-          View all{" "}
-        </span>
+        <p className='text-[#2196F3] hover:text-[#686B6F] font-normal leading-4 flex justify-center cursor-pointer items-center'>
+          <span className='text-lg mr-1'>+</span>
+          <span className='text-sm'>Add new task</span>
+        </p>
       </div>
       <div className='todos'>
         {todo.map((todo, idx) => (

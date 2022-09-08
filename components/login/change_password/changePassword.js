@@ -20,7 +20,7 @@ function ChangePasswordPg() {
         </div>
         <div className='title'>
           <h1>Change Password</h1>
-          <p className='text-[#0F017A] font-extralight text-lg text-center'>
+          <p className='text-[#686B6F] font-extralight text-lg text-center'>
             change default password to your prefferd choice
           </p>
         </div>

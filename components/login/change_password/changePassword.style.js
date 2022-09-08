@@ -49,7 +49,7 @@ export const ChangePasswordCont = styled.div`
         font-size: 45px;
         ${"" /* line-height: 46px; */}
         letter-spacing: 0.015em;
-        color: #0f017a;
+        color: #2196F3;
 
         @media ${devices.tabpro} {
           font-size: 35px;
@@ -73,7 +73,8 @@ export const ChangePasswordCont = styled.div`
       p {
         line-height: 18px;
         text-align: center;
-        letter-spacing: 0.015em;
+        letter-spacing: 0.15em;
+        text-align:center;
       }
 
     }
@@ -97,7 +98,7 @@ export const ChangePasswordCont = styled.div`
           color: #4f4f4f;
           input {
             margin-bottom: 35px;
-            padding: 15px 23px;
+            padding: 13px 23px;
             width: 100%;
             background: #ffffff;
             border: 1px solid #cacaca;
@@ -112,15 +113,15 @@ export const ChangePasswordCont = styled.div`
           width: 100%;
           outline: none;
           border: none;
-          background: #0f017a;
-          border-radius: 25px;
+          background: #2196F3;
+          border-radius: 18px;
           font-family: "Space Grotesk";
           font-style: normal;
-          font-weight: 700;
+          font-weight: 400;
           font-size: 15px;
           line-height: 19px;
           color: #e5e5e5;
-          padding: 12px 13px;
+          padding: 11px 13px;
           margin-top: 20px;
         }
         @media ${devices.large} {

@@ -34,8 +34,9 @@ export const SecondCont = styled.div`
     background: #2196f3;
     border-radius: 16px;
     font-style: normal;
-    line-height: 25px;
-    ${"" /* color: #ffffff; */}
+    &:hover {
+      background: #1c7dca;
+    }
   }
   .calender {
     border: 1px solid #e5e5e5;

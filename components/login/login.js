@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import { LoginContainer, LoginBody } from "./login.style";
-import SideImg from "../sharedComp/sideImg/sideImg";
-import Image from "next/image";
+import { LoginBody } from "./login.style";
 
 function Login() {
   const [loginDetails, setLoginDetails] = useState({
@@ -18,10 +16,10 @@ function Login() {
     <LoginBody>
       <div className='body-cont'>
         <div className='mobile-logo'>
-          <Image src='/assets/logo.svg' layout='fill' className='logo' alt='' />
+          <img src='/assets/logo.svg' layout='' className='logo' alt='' />
         </div>
         <div className='title'>
-          <h1>Login</h1>
+          <h1 className='text-[#2196F3]'>Login</h1>
         </div>
         <div className='form'>
           <form autoComplete='off'>

@@ -49,6 +49,7 @@ function Overview() {
                   styles={buildStyles({
                     rotation: 0.25,
                     textSize: "19px",
+                    trailColor: "#F9F9F9",
                     pathTransitionDuration: 0.5,
                     pathColor: `#2196F3`,
                     textColor: "#000000",
@@ -74,6 +75,7 @@ function Overview() {
                   styles={buildStyles({
                     rotation: 0.25,
                     textSize: "19px",
+                    trailColor: "#F9F9F9",
                     pathTransitionDuration: 0.5,
                     pathColor: `#2196F3`,
                     textColor: "#000000",
@@ -90,20 +92,23 @@ function Overview() {
           </span>
         </div>
       </FirstCont>
-      <SecondCont className=' px-8'>
-        <div className='flex justify-start items-center  flex-col'>
-          <Link href='/dashboard/add_report'>
-            <button className='add border-solid border-2 border-white-600 text-white mt-12 mb-14 font-bold text-tiny flex justify-center items-center p-3'>
-              <span className='mr-2'>
-                <img src='/assets/addIcon.svg' alt='' />
-              </span>{" "}
-              Add Report
-            </button>
-          </Link>
+      <SecondCont className=' px-5'>
+        <div className='flex flex-col'>
+          <div className='flex justify-center items-center mt-12 mb-14'>
+            <Link href='/dashboard/add_report'>
+              <button className='add  text-white  font-bold text-tiny flex justify-center items-center py-3 px-4'>
+                <span className='mr-2'>
+                  <img src='/assets/add-icon.svg' alt='' />
+                </span>{" "}
+                Add Report
+              </button>
+            </Link>
+          </div>
 
-          <div className='calender w-full pt-4 px-5'>
+          <div className='calender w-full pt-4 px-3 mt-2'>
             <ProjectCalendar />
           </div>
+
           <TodoList />
         </div>
       </SecondCont>
