@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import devices from "../../utils/mobile";
-export const GeneralContLayout = styled.div`
+ const GeneralContLayout = styled.div`
   ${"" /* height: 100%; */}
   background: #fff;
   width: 83%;
@@ -13,3 +13,4 @@ export const GeneralContLayout = styled.div`
     width: 92%;
   }
 `;
+export default GeneralContLayout;

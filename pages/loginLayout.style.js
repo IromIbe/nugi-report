@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import devices from "../utils/mobile";
 
-export const LoginLayoutCont = styled.div`
+ const LoginLayoutCont = styled.div`
   width: 60%;
   position: fixed;
   top: 0;
@@ -15,3 +15,4 @@ export const LoginLayoutCont = styled.div`
     ${"" /* padding: 10px 10px; */}
   }
 `;
+export default LoginLayoutCont;
