@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { GeneralContLayout } from "./general.style";
+import  GeneralContLayout  from "./general.style";
 
 const ProfileCont = styled.div``;
 function Profile() {

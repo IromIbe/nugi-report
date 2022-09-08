@@ -1,7 +1,7 @@
 import React from "react";
 // import styled from "styled-components";
 import AddReport from "../../components/addReport/addReport";
-import { GeneralContLayout } from "./general.style";
+import  GeneralContLayout  from "./general.style";
 // import SideReport from "../../components/sharedComp/side-report/sideReport";
 // import ReportLayout from "../../components/layout/reportLayout";
 

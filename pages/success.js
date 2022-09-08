@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginLayoutCont } from "./loginLayout.style";
+import  LoginLayoutCont  from "./loginLayout.style";
 import SuccessPage from "../components/login/change_password/successPage";
 
 function success() {
